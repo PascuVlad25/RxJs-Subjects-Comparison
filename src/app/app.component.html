@@ -1,0 +1,12 @@
+<div class="container">
+  <display-card *ngFor="let card of cards"></display-card>
+</div>
+
+<div>
+  <button (click)="addCard()">Add New Card</button>
+  <button (click)="reset()">Reset All</button>
+</div>
+<div>
+  <input [(ngModel)]="inputValue" />
+  <button (click)="updateSubjects()">Update Subjects</button>
+</div>
