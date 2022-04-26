@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { ObservableTile } from 'src/app/services/models';
 import { SubjectsService } from '../../services';
 
 @Component({
@@ -7,36 +7,12 @@ import { SubjectsService } from '../../services';
   templateUrl: './display-card.component.html',
   styleUrls: ['./display-card.component.scss'],
 })
-export class DisplayCard implements OnInit, OnDestroy {
-  simpleSubjectValue = 'no-value';
-  behaviorSubjectValue = 'no-value';
-  replaySubjectValue = 'no-value';
-
-  private subscription = new Subscription();
+export class DisplayCard implements OnInit {
+  observableTiles: ObservableTile<string>[] = [];
 
   public constructor(private subjectsService: SubjectsService) {}
 
   ngOnInit(): void {
-    this.subscription.add(
-      this.subjectsService.simpleSubject.subscribe((value) => {
-        this.simpleSubjectValue = value;
-      })
-    );
-
-    this.subscription.add(
-      this.subjectsService.behaviorSubject.subscribe((value) => {
-        this.behaviorSubjectValue = value;
-      })
-    );
-
-    this.subscription.add(
-      this.subjectsService.replaySubject.subscribe((value) => {
-        this.replaySubjectValue = value;
-      })
-    );
-  }
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    this.observableTiles = this.subjectsService.getObservableCards();
   }
 }

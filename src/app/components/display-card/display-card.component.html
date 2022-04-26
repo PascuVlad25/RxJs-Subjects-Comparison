@@ -1,8 +1,8 @@
 <div class="card-container">
-  <div class="title">Subject</div>
-  <div class="title">BehaviorSubject</div>
-  <div class="title">ReplaySubject</div>
-  <div class="tile purple">{{ simpleSubjectValue }}</div>
-  <div class="tile red">{{ behaviorSubjectValue }}</div>
-  <div class="tile orange">{{ replaySubjectValue }}</div>
+  <div class="tile-container" *ngFor="let observableTile of observableTiles">
+    <div class="title">{{ observableTile.name }}</div>
+    <div class="tile" [ngClass]="observableTile.color">
+      {{ observableTile.observable | async }}
+    </div>
+  </div>
 </div>

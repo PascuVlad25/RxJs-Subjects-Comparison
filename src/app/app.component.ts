@@ -17,11 +17,15 @@ export class AppComponent {
   }
 
   updateSubjects(): void {
-    this.subjectsService.updateSubjects(this.inputValue);
+    this.subjectsService.update(this.inputValue);
   }
 
   reset(): void {
     this.cards = [];
     this.subjectsService.reset();
+  }
+
+  complete(): void {
+    this.subjectsService.complete();
   }
 }

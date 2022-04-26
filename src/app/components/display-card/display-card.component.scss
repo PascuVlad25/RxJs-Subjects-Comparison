@@ -1,49 +1,58 @@
 .card-container {
-  width: 400px;
+  width: 500px;
   height: 130px;
   margin-bottom: 20px;
   padding: 15px 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 10px 35px -15px rgba(0, 0, 0, 0.3);
 
-  .title {
-    justify-self: center;
-    font-size: 12px;
-    font-weight: 600;
-    font-family: Helvetica, sans-serif;
-  }
-
-  .tile {
-    width: 100px;
-    height: 100px;
-    justify-self: center;
+  .tile-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    font-family: Helvetica, sans-serif;
-    border-radius: 10px;
 
-    &.purple {
-      background-color: rgb(91, 93, 209);
-      box-shadow: 0 10px 25px -10px rgb(91, 93, 209);
+    .title {
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: Helvetica, sans-serif;
     }
 
-    &.orange {
-      background-color: rgb(235, 166, 64);
-      box-shadow: 0 10px 25px -10px rgb(226, 155, 47);
-    }
+    .tile {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      font-family: Helvetica, sans-serif;
+      border-radius: 10px;
 
-    &.red {
-      background-color: rgb(221, 75, 95);
-      box-shadow: 0 10px 25px -10px rgb(221, 75, 95);
+      &.purple {
+        background-color: rgb(91, 93, 209);
+        box-shadow: 0 10px 25px -10px rgb(91, 93, 209);
+      }
+
+      &.orange {
+        background-color: rgb(235, 166, 64);
+        box-shadow: 0 10px 25px -10px rgb(226, 155, 47);
+      }
+
+      &.red {
+        background-color: rgb(221, 75, 95);
+        box-shadow: 0 10px 25px -10px rgb(221, 75, 95);
+      }
+
+      &.green {
+        background-color: rgb(102, 201, 146);
+        box-shadow: 0 10px 25px -10px rgb(109, 212, 132);
+      }
     }
   }
 }
