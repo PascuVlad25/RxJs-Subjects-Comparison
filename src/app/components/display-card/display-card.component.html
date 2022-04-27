@@ -1,7 +1,13 @@
 <div class="card-container">
-  <div class="tile-container" *ngFor="let observableTile of observableTiles">
+  <div
+    class="tile-container"
+    *ngFor="let observableTile of observableTiles; let i = index"
+  >
     <div class="title">{{ observableTile.name }}</div>
     <div class="tile" [ngClass]="observableTile.color">
+      <div title="Number of catched values" class="history-number">
+        {{ getHistoryValuesNumber(i) }}
+      </div>
       {{ observableTile.observable | async }}
     </div>
   </div>

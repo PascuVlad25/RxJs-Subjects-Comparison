@@ -15,11 +15,53 @@
 .buttons-container > button {
   all: unset;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 10px 15px;
   font-family: Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 600;
-  background-color: rgb(26, 122, 247);
   color: white;
+}
+
+.buttons-container > button.blue {
+  background-color: rgb(26, 140, 247);
+  box-shadow: 0 10px 15px -10px rgb(125, 181, 255);
+}
+
+.buttons-container > button.orange {
+  background-color: rgb(247, 173, 26);
+  box-shadow: 0 10px 15px -10px rgb(255, 189, 57);
+}
+
+.buttons-container > button.red {
+  background-color: rgb(247, 85, 26);
+  box-shadow: 0 10px 15px -10px rgb(255, 126, 80);
+}
+
+.update-input {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px -10px rgba(54, 202, 153, 0.4);
+}
+
+.update-input input {
+  all: unset;
+  padding: 10px 15px;
+  background-color: white;
+}
+
+.update-input button {
+  all: unset;
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: rgb(84, 202, 167);
+  color: white;
+}
+
+.buttons-container > button:hover,
+.update-input button:hover {
+  filter: brightness(105%);
 }

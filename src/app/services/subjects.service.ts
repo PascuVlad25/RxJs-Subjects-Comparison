@@ -46,7 +46,7 @@ export class SubjectsService {
       {
         name: 'ReplaySubject',
         color: 'red',
-        subject: new ReplaySubject<string>(1),
+        subject: new ReplaySubject<string>(2),
       },
       {
         name: 'AsyncSubject',

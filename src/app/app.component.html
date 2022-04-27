@@ -1,10 +1,22 @@
 <div class="buttons-container">
-  <button (click)="addCard()">Add New Card</button>
-  <button (click)="complete()">Complete All</button>
-  <button (click)="reset()">Reset All</button>
-  <div>
+  <button class="blue" (click)="addCard()">
+    <fa-icon [icon]="addIcon"></fa-icon>
+    Add New Card
+  </button>
+  <button class="orange" (click)="complete()">
+    <fa-icon [icon]="completeIcon"></fa-icon>
+    Complete All
+  </button>
+  <button class="red" (click)="reset()">
+    <fa-icon [icon]="resetIcon"></fa-icon>
+    Reset All
+  </button>
+  <div class="update-input">
     <input [(ngModel)]="inputValue" />
-    <button (click)="updateSubjects()">Update All</button>
+    <button (click)="updateSubjects()">
+      <fa-icon [icon]="updateIcon"></fa-icon>
+      Update All
+    </button>
   </div>
 </div>
 

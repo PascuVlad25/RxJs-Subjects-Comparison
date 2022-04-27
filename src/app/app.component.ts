@@ -1,6 +1,13 @@
 import { Component } from '@angular/core';
 import { SubjectsService } from './services';
 
+import {
+  faPlus,
+  faCheck,
+  faArrowRotateRight,
+  faArrowUp,
+} from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -9,6 +16,10 @@ import { SubjectsService } from './services';
 export class AppComponent {
   cards = [{}];
   inputValue = '';
+  addIcon = faPlus;
+  completeIcon = faCheck;
+  resetIcon = faArrowRotateRight;
+  updateIcon = faArrowUp;
 
   public constructor(private subjectsService: SubjectsService) {}
 
