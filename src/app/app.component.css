@@ -1,8 +1,6 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+:host {
+  display: block;
+  padding: 30px;
 }
 
 .buttons-container {
@@ -10,6 +8,7 @@
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .buttons-container > button {
@@ -64,4 +63,11 @@
 .buttons-container > button:hover,
 .update-input button:hover {
   filter: brightness(105%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
